@@ -2,6 +2,8 @@
 // From 07-19 Classwork
 //Parašykite funkciją, kuri priimtų argumentą - masyvą ir sumaišytu jo elementus atsitiktine tvarka, bet pirmą ir paskutinį paliktu vietoje.
 //
+var_dump('From 07-19 Classwork');
+
 function mix($arra) {
     if (!is_array($arra)) return $arra;
 
@@ -13,13 +15,40 @@ function mix($arra) {
         $random[$key] = $new[$key];
     return $random;
 }
-
 $arra = [1, 2, 3, 4, 5, 6, 7, 8];
 $first = array_shift($arra);
 $last = array_pop($arra);
-var_dump('From 07-19 Classwork');
-var_dump($first, mix($arra), $last);
 
+var_dump($first, mix($arra), $last);
+//Sukurkite masyvą $vartotojas su laukais - vardas, pavardė, amžius, paštas.(Užuomina. Asociatyvus masyvas )
+//
+$user = ['name', 'surname', 'age', 'email'];
+$user = [
+    'name' => [
+        'Jonas', 'Paulius', 'Ema'
+    ],
+    'surname' => [
+        'Jonaitis', 'Paulaitis', 'Emaitė'
+    ],
+    'age' => [
+        '13', '20', '70'
+    ],
+    'email' => [
+        'jonas@jonaitis.lt', 'paulius@paulaitis.lt', 'ema@emaite.lt'
+    ]
+];
+//Sukurkite funkciją yra Pilnametis, kuri priimtų vieną parametrą - $vartotojas(masyvas iš praeitos užduoties) ir GRAŽINTU tekstą su statusu: nepilnametis, pilnametis, pensininkas.
+//
+function isadult($user){
+    if ($user['age'] < 18){
+        sprintf('Jūs esate nepilnametis!', $user['age']);
+    } else if ($user['age'] > 18 && $user['age'] < 65){
+        sprintf('Jūs esate pilnametis!', $user['age']);
+    } else {
+        return 'Jūs esate pensijinio amžiaus';
+    }
+}
+var_dump(isadult($user));
 //Masyvai
 var_dump('MASYVAI');
 //Sukurti skirtingų skaičių masyvą. Sekančias užduotis atlikti su naujomis masyvo kopijomis.
