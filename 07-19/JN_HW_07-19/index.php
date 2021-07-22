@@ -70,7 +70,7 @@ var_dump(multitwo($arr));
 function square($arr){
     $total = 0;
     foreach($arr as $key=>$value){
-        $total += $value ** 2;
+        $total = $value ** 2;
         $result[] = $total;
     }
     return $result;
