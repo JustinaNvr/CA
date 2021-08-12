@@ -1,0 +1,22 @@
+body {
+    background-image: url("walpaper.jpg");
+}
+
+.side{
+    .img-responsive;
+    height: 30px;
+    width: 30px;
+}
+.laces {
+    height: 50px;
+    width: 50px;
+}
+
+.footerlaces{
+    height: 90px;
+    width: 90px;
+}
+
+.bckgrnd {
+    background: floralwhite;
+}
